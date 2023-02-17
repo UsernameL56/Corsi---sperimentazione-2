@@ -30,7 +30,11 @@ namespace Corsi___sperimentazione
 
         private void PulsanteAggiunta_Click(object sender, EventArgs e)
         {
-            Aggiungi(array, ref indice, textBox1.Text);
+            if (Aggiungi(array, ref indice, textBox1.Text) == true)
+                label3.Text = "Elemento n. "+indice+ " inserito correttamente, premere il pulsante 'Stampa' per visualizzarlo nella listview";
+            else
+                label3.Text = "Array pieno";
+            label3.Visible = true;
 
         }
 
@@ -42,6 +46,7 @@ namespace Corsi___sperimentazione
             {
                 listView1.Items.Add(array[i]);
             }
+            label3.Visible = false;
 
         }
 
@@ -62,8 +67,11 @@ namespace Corsi___sperimentazione
         {
             textBox2.Visible = true;
             label2.Visible = true;
+            label3.Text = "Inserire nella textbox di input la parola che si vuole sostituire, e nella textbox di modifica invece quella nuova";
+            label3.Visible = true;
             if (Ricerca(array, textBox1.Text) == true)
             {
+                label3.Visible = false;
                 listView1.Clear();
                 Modifica(array, textBox1.Text, textBox2.Text);
                 for (int i = 0; i < indice; i++)
@@ -90,10 +98,21 @@ namespace Corsi___sperimentazione
 
         }
         //funzione di servizio
-        public void Aggiungi(string[] array, ref int indice, string nome)
+        static bool Aggiungi(string[] array, ref int indice, string input)
         {
-            array[indice] = nome;
-            indice++;
+            bool inserito = true;
+            //controllare se non abbiamo raggiunto la fine dell'array, se questa condizione è vera allora non fare nulla
+            if (indice < array.Length)
+            {
+                //inserimento dell'elemento
+                array[indice] = input;
+                //incremento dell'indice
+                indice++;
+            }
+            else
+                inserito = false;
+            //ritorno in base allo spazio disponibile
+            return inserito;
         }
 
         public void Cancellazione(string[] a, string input, ref int indice)

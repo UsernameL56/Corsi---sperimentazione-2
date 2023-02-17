@@ -44,9 +44,9 @@
             // 
             this.listView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(637, 31);
+            this.listView1.Location = new System.Drawing.Point(678, 146);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(424, 621);
+            this.listView1.Size = new System.Drawing.Size(347, 471);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -139,12 +139,14 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 11;
             this.label3.Text = "label3";
+            this.label3.Visible = false;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1073, 664);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
