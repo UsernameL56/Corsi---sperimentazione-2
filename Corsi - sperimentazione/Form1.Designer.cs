@@ -38,15 +38,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // listView1
             // 
             this.listView1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(678, 146);
+            this.listView1.Location = new System.Drawing.Point(689, 116);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(347, 471);
+            this.listView1.Size = new System.Drawing.Size(347, 423);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -54,7 +55,7 @@
             // 
             // PulsanteAggiunta
             // 
-            this.PulsanteAggiunta.Location = new System.Drawing.Point(66, 496);
+            this.PulsanteAggiunta.Location = new System.Drawing.Point(66, 443);
             this.PulsanteAggiunta.Name = "PulsanteAggiunta";
             this.PulsanteAggiunta.Size = new System.Drawing.Size(109, 43);
             this.PulsanteAggiunta.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             // PulsanteStampa
             // 
-            this.PulsanteStampa.Location = new System.Drawing.Point(190, 496);
+            this.PulsanteStampa.Location = new System.Drawing.Point(190, 443);
             this.PulsanteStampa.Name = "PulsanteStampa";
             this.PulsanteStampa.Size = new System.Drawing.Size(109, 43);
             this.PulsanteStampa.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // PulsanteCancellazione
             // 
-            this.PulsanteCancellazione.Location = new System.Drawing.Point(315, 496);
+            this.PulsanteCancellazione.Location = new System.Drawing.Point(315, 443);
             this.PulsanteCancellazione.Name = "PulsanteCancellazione";
             this.PulsanteCancellazione.Size = new System.Drawing.Size(109, 43);
             this.PulsanteCancellazione.TabIndex = 6;
@@ -93,7 +94,7 @@
             // 
             // PulsanteModifica
             // 
-            this.PulsanteModifica.Location = new System.Drawing.Point(439, 496);
+            this.PulsanteModifica.Location = new System.Drawing.Point(439, 443);
             this.PulsanteModifica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PulsanteModifica.Name = "PulsanteModifica";
             this.PulsanteModifica.Size = new System.Drawing.Size(109, 43);
@@ -134,7 +135,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 222);
+            this.label3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(63, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 11;
@@ -142,12 +144,24 @@
             this.label3.Visible = false;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // listView2
+            // 
+            this.listView2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(12, 590);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(1049, 48);
+            this.listView2.TabIndex = 12;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(1073, 664);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -178,6 +192,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listView2;
     }
 }
 

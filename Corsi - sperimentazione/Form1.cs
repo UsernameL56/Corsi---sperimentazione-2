@@ -31,10 +31,12 @@ namespace Corsi___sperimentazione
         private void PulsanteAggiunta_Click(object sender, EventArgs e)
         {
             if (Aggiungi(array, ref indice, textBox1.Text) == true)
-                label3.Text = "Elemento n. "+indice+ " inserito correttamente, premere il pulsante 'Stampa' per visualizzarlo nella listview";
+                listView2.Items.Add("Elemento n. " + indice + " inserito correttamente, premere il pulsante 'Stampa' per visualizzarlo nella listview");
             else
-                label3.Text = "Array pieno";
+                listView2.Items.Add("Array pieno");
             label3.Visible = true;
+            textBox1.Clear();
+            
 
         }
 
@@ -47,6 +49,7 @@ namespace Corsi___sperimentazione
                 listView1.Items.Add(array[i]);
             }
             label3.Visible = false;
+            textBox1.Clear();
 
         }
 
@@ -62,6 +65,7 @@ namespace Corsi___sperimentazione
                     listView1.Items.Add(array[i]);
                 }
             }
+            textBox1.Clear();
         }
         private void PulsanteModifica_Click(object sender, EventArgs e)
         {
@@ -79,6 +83,8 @@ namespace Corsi___sperimentazione
                     listView1.Items.Add(array[i]);
                 }
             }
+            textBox1.Clear();
+            textBox2.Clear();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
